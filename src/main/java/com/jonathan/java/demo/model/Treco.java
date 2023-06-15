@@ -1,4 +1,4 @@
-package com.jonathan.java.demo;
+package com.jonathan.java.demo.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Usuario {
+public class Treco {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,11 +26,8 @@ public class Usuario {
 	@Column(length = 63)
 	private String name;
 
-	@Column(length = 255)
-	private String email;
+	@Column(length = 127)
+	private String description;
 	
-	@Column(length = 255)
-	private String password;
-	
-	public void usuarios() {}
+	public void tercos() {}
 }

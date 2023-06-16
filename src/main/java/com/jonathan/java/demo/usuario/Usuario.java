@@ -1,4 +1,4 @@
-package com.jonathan.java.demo.model;
+package com.jonathan.java.demo.usuario;
 
 import java.sql.Timestamp;
 

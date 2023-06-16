@@ -1,7 +1,5 @@
-package com.jonathan.java.demo.repositories;
+package com.jonathan.java.demo.trecos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.jonathan.java.demo.model.Treco;
 
 public interface TrecoRepository extends JpaRepository<Treco, Long>{}

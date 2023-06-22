@@ -3,7 +3,10 @@ package com.jonathan.java.demo.articles;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -83,5 +86,28 @@ public class ArticleController {
 		return "{ \"status\" : \"not found\" }";
 
 	}
+	
+	 @DeleteMapping(path ="/articles/{id}")
+	 public String deleteById(@PathVariable("id") Long id) {
+	    return "Delete by id called";
+	 }
+	 
+	 
+	// Obtém os registros à partir de uma "string de busca".
+		// Por exemplo, para pesquisar por "biscoito":
+		// GET → http://localhost:8080/trecos/search/biscoito
+		// A busca é "case-insensitive", ou seja, busca por "biscoito" ou "BISCOITO" tem
+		// o mesmo resultado.
+		// Retorna uma coleção ([]) com todos os registros em que os campos "name" e/ou
+		// "description" contenham a "string de busca".
+		// Se não encontrar nada, retorna {"status": "not-found"}.
+		@GetMapping(path = "/search/{query}", produces = "application/json")
+		public ResponseEntity<Object> search(@PathVariable String query) {
+			List<Article> article = articleRepository.findByTitleContainingIgnoreCase(query);
+			if (article.isEmpty()) {
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"status\": \"not-found\"}");
+			}
+			return ResponseEntity.ok(article);
+		}
 
 }

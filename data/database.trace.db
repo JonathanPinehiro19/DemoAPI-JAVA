@@ -252,3 +252,7 @@ SELECT * FROM articles WHERE date <= NOW() AND status = 'on' AND id = ? [42102-2
 2023-06-23 20:23:44 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARTICLES" not found; SQL statement:
 SELECT * FROM articles WHERE date <= NOW() AND status = 'on' AND id = ? [42102-214]
+2023-06-26 18:02:59 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-26 18:06:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

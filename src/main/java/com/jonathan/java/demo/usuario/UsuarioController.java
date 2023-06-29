@@ -36,9 +36,9 @@ public class UsuarioController {
 	@PostMapping
 	public Usuario post(@RequestBody Usuario usuario) {
 		return usuarioRepository.save(usuario);
-		
+
 	}
-	
+
 	@PatchMapping(path = "/{id}")
 	public Usuario patch(@PathVariable Long id, @RequestBody Usuario usuario) {
 		return null;

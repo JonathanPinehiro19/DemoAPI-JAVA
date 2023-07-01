@@ -256,3 +256,5 @@ SELECT * FROM articles WHERE date <= NOW() AND status = 'on' AND id = ? [42102-2
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
 2023-06-26 18:06:13 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-29 21:34:21 jdbc[73]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

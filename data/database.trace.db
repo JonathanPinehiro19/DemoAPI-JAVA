@@ -258,3 +258,87 @@ org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-21
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
 2023-06-29 21:34:21 jdbc[73]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-07-14 19:13:51 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 50 more
+2023-07-14 19:21:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "(\000d\000a\0009[*]'https://iili.io/Hspvrap.png', \000d\000a\0009'Arrays em JavaScript', \000d\000a\0009'Aqui estão alguns exemplos de como trabalhar com arrays em JavaScript', \000d\000a\0009'<p>Os arrays em JavaScript são estruturas de dados que permitem armazenar e acessar múltiplos valores em uma única variável. Eles podem conter diferentes tipos de dados, como números, strings, objetos e até mesmo outros arrays. Os elementos em um array são indexados numericamente, começando por 0 para o primeiro elemento.</p><p>Aqui estão alguns exemplos de como trabalhar com arrays em JavaScript:</p><p>Criando um array:</p><p></p><img src=""https://iili.io/Hsp4XcJ.png"" alt=""Exemplo ""><p>Acessando elementos do array:</p><p></p><img src=""https://iili.io/Hsp4h8v.png"" alt=""Exemplo 2""><p>Alterando elementos do array:</p><p></p><img src=""https://iili.io/Hsp4w9R.png"" alt=""Exemplo 3""><p>Obtendo o comprimento do array:</p><p></p><img src=""https://iili.io/Hsp4OwN.png"" alt=""Exemplo 4""><p>Adicionando elementos ao final do array:</p><p></p><img src=""https://iili.io/Hsp4etI.png"" alt=""Exemplo 5""><p>Removendo o último elemento do array:</p><p></p><img src=""https://iili.io/Hsp4En1.png"" alt=""Exemplo 6""><p>Iterando sobre os elementos do array com um loop for:</p><p></p><img src=""https://iili.io/Hsp4M6g.png"" alt=""Exemplo 7""><p>Iterando sobre os elementos do array com um loop for...of:</p><p></p><img src=""https://iili.io/Hsp4GMF.png"" alt=""Exemplo 8""><p>Verificando se um valor existe no array:</p><p></p><img src=""https://iili.io/Hsp40ZP.png"" alt=""Exemplo 9""><p>Convertendo um array em uma string:</p><p></p><img src=""https://iili.io/Hsp4WFa.png"" alt=""Exemplo 10""><p>Esses são apenas alguns exemplos básicos de como usar arrays em JavaScript. Eles são amplamente utilizados para armazenar e manipular conjuntos de dados de forma eficiente. Com arrays, você pode realizar operações como adicionar, remover, acessar e percorrer elementos facilmente.</p><h4>Links:</h4><ul><li><a href=""https://github.com/JonathanPinehiro19"">Github - Jonathan</a></li><li><a href=""https://github.com/Dev-Edison"">Github - Edison</a></li></ul>',\000d\000a\0009'2023-04-17 20:24:00', \000d\000a\0009'0', \000d\000a\0009'on'\000d\000a)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(
+	'https://iili.io/Hspvrap.png', 
+	'Arrays em JavaScript', 
+	'Aqui estão alguns exemplos de como trabalhar com arrays em JavaScript', 
+	'<p>Os arrays em JavaScript são estruturas de dados que permitem armazenar e acessar múltiplos valores em uma única variável. Eles podem conter diferentes tipos de dados, como números, strings, objetos e até mesmo outros arrays. Os elementos em um array são indexados numericamente, começando por 0 para o primeiro elemento.</p><p>Aqui estão alguns exemplos de como trabalhar com arrays em JavaScript:</p><p>Criando um array:</p><p></p><img src="https://iili.io/Hsp4XcJ.png" alt="Exemplo "><p>Acessando elementos do array:</p><p></p><img src="https://iili.io/Hsp4h8v.png" alt="Exemplo 2"><p>Alterando elementos do array:</p><p></p><img src="https://iili.io/Hsp4w9R.png" alt="Exemplo 3"><p>Obtendo o comprimento do array:</p><p></p><img src="https://iili.io/Hsp4OwN.png" alt="Exemplo 4"><p>Adicionando elementos ao final do array:</p><p></p><img src="https://iili.io/Hsp4etI.png" alt="Exemplo 5"><p>Removendo o último elemento do array:</p><p></p><img src="https://iili.io/Hsp4En1.png" alt="Exemplo 6"><p>Iterando sobre os elementos do array com um loop for:</p><p></p><img src="https://iili.io/Hsp4M6g.png" alt="Exemplo 7"><p>Iterando sobre os elementos do array com um loop for...of:</p><p></p><img src="https://iili.io/Hsp4GMF.png" alt="Exemplo 8"><p>Verificando se um valor existe no array:</p><p></p><img src="https://iili.io/Hsp40ZP.png" alt="Exemplo 9"><p>Convertendo um array em uma string:</p><p></p><img src="https://iili.io/Hsp4WFa.png" alt="Exemplo 10"><p>Esses são apenas alguns exemplos básicos de como usar arrays em JavaScript. Eles são amplamente utilizados para armazenar e manipular conjuntos de dados de forma eficiente. Com arrays, você pode realizar operações como adicionar, remover, acessar e percorrer elementos facilmente.</p><h4>Links:</h4><ul><li><a href="https://github.com/JonathanPinehiro19">Github - Jonathan</a></li><li><a href="https://github.com/Dev-Edison">Github - Edison</a></li></ul>',
+	'2023-04-17 20:24:00', 
+	'0', 
+	'on'
+) [42001-214]
+2023-07-14 19:45:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "(\000d\000a\0009[*]'https://iili.io/HssgZiB.png', \000d\000a\0009'Entendendo o DOM em JavaScript', \000d\000a\0009'O que é e como funciona o DOM?', \000d\000a\0009'<p>Introdução:</p><p>O JavaScript é uma linguagem de programação amplamente utilizada para adicionar interatividade e dinamismo aos websites. Uma das principais características do JavaScript é o seu uso do DOM, ou Document Object Model (Modelo de Objeto de Documento). Neste artigo, vamos explorar o conceito do DOM em JavaScript, entender sua importância e descobrir como ele funciona.</p><p>O que é o DOM?</p><p>O DOM é uma interface de programação que representa a estrutura de um documento HTML ou XML como uma árvore de objetos. Em outras palavras, o DOM permite que você acesse e manipule elementos HTML, seus atributos e conteúdo usando JavaScript. Ele fornece uma forma padronizada de interagir com os elementos da página, permitindo alterações dinâmicas e atualizações em tempo real.</p><p>Como o DOM funciona?</p><p>Quando um navegador carrega uma página da web, ele constrói uma representação do documento chamada de árvore DOM. Cada elemento HTML é representado por um nó na árvore, e esses nós podem ter relacionamentos pais, filhos e irmãos, formando uma estrutura hierárquica. Essa estrutura é então disponibilizada para ser manipulada através do JavaScript.</p><p>Exemplo de código:</p><img src=""https://iili.io/Hss1Ua1.png"" style=""width:100%;display:block; margin:auto;"" alt=""Exemplo DOM"" style=""width:100%;display:block; margin:auto;""><p>Manipulando o DOM:</p><p>O JavaScript oferece uma série de métodos e propriedades para manipular o DOM. Com essas ferramentas, você pode selecionar elementos, modificar seus estilos, adicionar ou remover nós, alterar conteúdos e até mesmo responder a eventos do usuário, como cliques ou envio de formulários.</p><p>O JavaScript oferece uma série de métodos e propriedades para manipular o DOM. Com essas ferramentas, você pode selecionar elementos, modificar seus estilos, adicionar ou remover nós, alterar conteúdos e até mesmo responder a eventos do usuário, como cliques ou envio de formulários.</p><p>Vantagens do uso do DOM:</p><pO uso do DOM em JavaScript traz várias vantagens. Ele permite a criação de páginas interativas e dinâmicas, onde elementos podem ser alterados e atualizados sem a necessidade de recarregar a página inteira. Além disso, o DOM facilita a criação de aplicações web modernas, onde os elementos da página podem ser manipulados em tempo real de acordo com as interações do usuário.p><p>Conclusão:</p><p>O DOM em JavaScript é uma ferramenta poderosa para manipular e interagir com elementos HTML. Ele permite que você acesse, modifique e atualize o conteúdo de uma página da web de forma dinâmica. Compreender o DOM é essencial para desenvolvedores web, pois isso lhes dá o poder de criar experiências ricas e interativas para os usuários. Portanto, ao mergulhar no JavaScript, familiarizar-se com o DOM é um passo fundamental para se tornar um programador web eficiente.</p><h4>Links:</h4><ul><li><a href=""https://github.com/JonathanPinehiro19"">Github - Jonathan</a></li><li><a href=""https://github.com/Dev-Edison"">Github - Edison</a></li></ul>', \000d\000a\0009'2023-07-12 03:13:00', \000d\000a\0009'0', \000d\000a\0009'on'\000d\000a)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(
+	'https://iili.io/HssgZiB.png', 
+	'Entendendo o DOM em JavaScript', 
+	'O que é e como funciona o DOM?', 
+	'<p>Introdução:</p><p>O JavaScript é uma linguagem de programação amplamente utilizada para adicionar interatividade e dinamismo aos websites. Uma das principais características do JavaScript é o seu uso do DOM, ou Document Object Model (Modelo de Objeto de Documento). Neste artigo, vamos explorar o conceito do DOM em JavaScript, entender sua importância e descobrir como ele funciona.</p><p>O que é o DOM?</p><p>O DOM é uma interface de programação que representa a estrutura de um documento HTML ou XML como uma árvore de objetos. Em outras palavras, o DOM permite que você acesse e manipule elementos HTML, seus atributos e conteúdo usando JavaScript. Ele fornece uma forma padronizada de interagir com os elementos da página, permitindo alterações dinâmicas e atualizações em tempo real.</p><p>Como o DOM funciona?</p><p>Quando um navegador carrega uma página da web, ele constrói uma representação do documento chamada de árvore DOM. Cada elemento HTML é representado por um nó na árvore, e esses nós podem ter relacionamentos pais, filhos e irmãos, formando uma estrutura hierárquica. Essa estrutura é então disponibilizada para ser manipulada através do JavaScript.</p><p>Exemplo de código:</p><img src="https://iili.io/Hss1Ua1.png" style="width:100%;display:block; margin:auto;" alt="Exemplo DOM" style="width:100%;display:block; margin:auto;"><p>Manipulando o DOM:</p><p>O JavaScript oferece uma série de métodos e propriedades para manipular o DOM. Com essas ferramentas, você pode selecionar elementos, modificar seus estilos, adicionar ou remover nós, alterar conteúdos e até mesmo responder a eventos do usuário, como cliques ou envio de formulários.</p><p>O JavaScript oferece uma série de métodos e propriedades para manipular o DOM. Com essas ferramentas, você pode selecionar elementos, modificar seus estilos, adicionar ou remover nós, alterar conteúdos e até mesmo responder a eventos do usuário, como cliques ou envio de formulários.</p><p>Vantagens do uso do DOM:</p><pO uso do DOM em JavaScript traz várias vantagens. Ele permite a criação de páginas interativas e dinâmicas, onde elementos podem ser alterados e atualizados sem a necessidade de recarregar a página inteira. Além disso, o DOM facilita a criação de aplicações web modernas, onde os elementos da página podem ser manipulados em tempo real de acordo com as interações do usuário.p><p>Conclusão:</p><p>O DOM em JavaScript é uma ferramenta poderosa para manipular e interagir com elementos HTML. Ele permite que você acesse, modifique e atualize o conteúdo de uma página da web de forma dinâmica. Compreender o DOM é essencial para desenvolvedores web, pois isso lhes dá o poder de criar experiências ricas e interativas para os usuários. Portanto, ao mergulhar no JavaScript, familiarizar-se com o DOM é um passo fundamental para se tornar um programador web eficiente.</p><h4>Links:</h4><ul><li><a href="https://github.com/JonathanPinehiro19">Github - Jonathan</a></li><li><a href="https://github.com/Dev-Edison">Github - Edison</a></li></ul>', 
+	'2023-07-12 03:13:00', 
+	'0', 
+	'on'
+) [42001-214]
+2023-07-14 20:38:15 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-07-14 20:50:42 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-07-14 20:51:26 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

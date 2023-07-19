@@ -36,6 +36,10 @@ public class Usuario {
 
 	@Column(length = 15)
 	private String type;
+	
+	@Column(length = 255)
+	private String github;
+
 
 	@Column(length = 15)
 	private String status = "on";
@@ -102,6 +106,14 @@ public class Usuario {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	public String getGithub() {
+		return github;
+	}
+
+	public void setGithub(String github) {
+		this.github = github;
 	}
 
 	public String getStatus() {
